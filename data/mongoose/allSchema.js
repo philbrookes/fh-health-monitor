@@ -23,7 +23,8 @@ var Check = Schema({
   totalRun:Number,
   passedRun:Number,
   lastRunId:String,
-  recordRotation:Number
+  recordRotation:Number,
+  contactId:String
 });
 
 
@@ -35,6 +36,13 @@ var Run = Schema({
   response: Object,
   isSuccessful: Boolean,
   failReason: String
+});
+
+
+var Contact = Schema({
+  name: String,
+  email: String,
+  createDate:Date
 });
 
 
@@ -61,6 +69,7 @@ module.exports={
   Notification:Notification,
   Check:Check,
   Run:Run,
+  Contact:Contact,
   TCPConfig:TCPConfig,
   PINGConfig:PINGConfig,
   HTTPConfig:HTTPConfig

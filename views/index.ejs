@@ -12,9 +12,10 @@
 </head>
 
 <body>
-<div id="header" class="clearfix">
+<div id="header" class="clearfix row">
   <div class="title pull-left">Monitoring</div>
-  <div class="pull-right" title="<%= readOnly ? "go to admin to add new checks." : "" %>"><a href="#create" class="add_new btn btn-primary" <%= readOnly ? 'disabled=disabled' : '' %>>Add New</a></div>
+  <div class="pull-right with-horizontal-margin" title="<%= readOnly ? "go to admin to add new checks." : "" %>"><a href="#create" class="add_new btn btn-primary" <%= readOnly ? 'disabled=disabled' : '' %>>Create Monitor</a></div>
+  <div class="pull-right"><a href="#manageContacts" class="btn btn-primary">Manage Contacts</a></div>
 </div>
 <div id="body">
 </div>
@@ -37,10 +38,12 @@
 <!--models -->
 <script type="application/javascript" src="app/models/check.js"></script>
 <script type="application/javascript" src="app/models/run.js"></script>
+<script type="application/javascript" src="app/models/contact.js"></script>
 
 <!--collections -->
 <script type="application/javascript" src="app/collections/checks.js"></script>
 <script type="application/javascript" src="app/collections/runs.js"></script>
+<script type="application/javascript" src="app/collections/contacts.js"></script>
 
 <!-- Views -->
 <script type="application/javascript" src="app/views/checkList.js"></script>
@@ -50,6 +53,9 @@
 <script type="application/javascript" src="app/views/runTable.js"></script>
 <script type="application/javascript" src="app/views/runrow.js"></script>
 <script type="application/javascript" src="app/views/runDetail.js"></script>
+<script type="application/javascript" src="app/views/manageContacts.js"></script>
+<script type="application/javascript" src="app/views/ContactRow.js"></script>
+<script type="application/javascript" src="app/views/createContact.js"></script>
 
 <!-- routes -->
 <script type="application/javascript" src="app/routes/rundetail.js"></script>
@@ -62,6 +68,9 @@ $(function(){
 <!-- templates -->
 <script type="text/template" id="tmpl_monitorlist_row"> </script>
 <script type="text/template" id="tmpl_create_check"> </script>
+<script type="text/template" id="tmpl_manage_contacts"> </script>
+<script type="text/template" id="tmpl_contact_row"> </script>
+<script type="text/template" id="tmpl_create_contact"> </script>
 <script type="text/template" id="tmpl_monitorlist"> </script>
 <script type="text/template" id="tmpl_runlist"> </script>
 <script type="text/template" id="tmpl_run_row"> </script>

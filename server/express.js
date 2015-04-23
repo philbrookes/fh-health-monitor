@@ -18,6 +18,7 @@ function initServer(cb) {
   app.use("/", require("./routes/home"));
   app.use("/checks", require("./routes/check"));
   app.use("/runs", require("./routes/run"));
+  app.use("/contacts", require("./routes/run"));
   app.use("/api", require("./routes/api"));
   //FeedHenry error catcher
   app.use(mbaas.errorHandler());

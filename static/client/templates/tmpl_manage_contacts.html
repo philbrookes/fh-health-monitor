@@ -1,0 +1,25 @@
+<div class="modal fade check_modal" id="create_contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close close-modal" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="create_contact_title">Manage Your Contacts</h4>
+      </div>
+      <table class="contacts" id="contacts_container">
+          <tr>
+            <th class="slim"><input type="checkbox" id="checkAllContacts" /> Select All</th>
+            <th>Name</th>
+            <th class="fat">Email</th>
+            <th>Created</th>
+            <th>Actions</th>
+          </tr>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        <button id="createContact" class="add_new btn btn-primary" <%= readOnly ? 'disabled=disabled' : '' %>>Create Contact</button>
+      </div>
+    </div>
+  </div>
+</div>

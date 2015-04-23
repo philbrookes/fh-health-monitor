@@ -6,6 +6,8 @@
       'check/:id': 'check',
       'check/:id?:queryString': 'check',
       'rundetail/:runid': 'rundetail',
+      'createContact': 'createContact',
+      'manageContacts': 'manageContacts',
       '*path': 'default'
     }
   });
@@ -22,6 +24,14 @@
   app.router.on('route:create', function() {
     app.views.createCheck.render()
   });
+
+  app.router.on('route:createContact', function() {
+    app.views.createContact.render();
+  });
+  app.router.on('route:manageContacts', function() {
+    app.views.manageContacts.render();
+  });
+
   app.router.on('route:edit', function(id) {
     var model = app.collections.checks.get(id);
     app.views.editCheck.setModel(model);

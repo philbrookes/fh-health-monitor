@@ -133,3 +133,41 @@ ul{
     border-radius: 4px;
     background-color: #ffff88;
 }
+.with-horizontal-margin{
+    margin: 0 25px;
+}
+
+table.contacts {
+    width: 865px;
+    margin: 15px;
+}
+
+table.contacts td, table.contacts th {
+    width: 20%;
+    height: 50px;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #cdcdcd;
+    padding: 0 0 0 15px;
+}
+
+table.contacts th {
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    background-color: #dfdfdf;
+}
+
+table.contacts td.slim {
+    width: 5%;
+}
+table.contacts td.fat {
+    width: 35%;
+}
+
+table.contacts tr:hover td {
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
+table.contacts tr:last-child td{
+    border-bottom-width: 1px;
+}

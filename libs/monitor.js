@@ -58,6 +58,7 @@ function initRoutes(cb) {
   app.get(/\/$|\/admin$/, require('../server/routes/index'));
   app.use("/checks", require("../server/routes/check"));
   app.use("/runs", require("../server/routes/run"));
+  app.use("/contacts", require("../server/routes/contact"));
   app.use("/api", require("../server/routes/api"));
   log.info("Routes initialised");
   cb();

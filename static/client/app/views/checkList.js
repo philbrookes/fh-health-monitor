@@ -36,7 +36,6 @@
       var url="/api/summary"+qStr;
       var absUrl=qualifyURL(url);
       prompt("Your monitor summary url",absUrl);
-
     },
     render: function() {
       var col = this.getCol();

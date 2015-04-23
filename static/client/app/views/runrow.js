@@ -29,7 +29,7 @@
             self.showModal()
           },
           error: function () {
-            app.msg.alert('Error happend while retriving detailed information.')
+            app.msg.alert('Error while retrieving detailed information.')
           }
         })
       }

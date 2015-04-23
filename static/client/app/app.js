@@ -69,6 +69,9 @@ var app = (function (module) {
     app.views.checkListView = new app.ViewCls.CheckListView();
     app.views.createCheck = new app.ViewCls.CreateCheckModal();
     app.views.editCheck = new app.ViewCls.EditCheckModal();
+    app.views.manageContacts = new app.ViewCls.ManageContactsModal();
+    app.views.createContact = new app.ViewCls.CreateContactModal();
+
     //init home page -- check list view
     app.views.checkListView.render();
     cb()
