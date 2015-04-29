@@ -22,14 +22,8 @@
     events: {
       'hidden.bs.modal': 'onHidden',
       'shown.bs.modal': 'onShow',
-      'click #createContact': 'showCreateContactForm'
-    },
-    keyaction: function(ev){
-      if(ev.keyCode == 27){
-        this.hide();
-        return false;
-      }
-      return;
+      'click #createContact': 'showCreateContactForm',
+      'click #checkAllContacts': 'toggleAll'
     },
     onShow: function () {
       this.isShow=true;
